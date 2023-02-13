@@ -12,6 +12,6 @@ export const CategoryList: TCategoryList = [
   { id: 3, name: "Canned foods & Soups", icon: "/game-icons_canned-fish.png" },
   { id: 4, name: "Bakery", icon: "/material-symbols_cake-rounded.png" },
   { id: 5, name: "Dairy & Eggs", icon: "/jam_eggs-f.png" },
-  { id: 6, name: "Frozen", icon: "/public/ion_fast-food.png" },
-  { id: 7, name: "Meat & Seafood", icon: "🍖" },
+  { id: 6, name: "Frozen", icon: "/ion_fast-food.png" },
+  { id: 7, name: "Meat & Seafood", icon: "/ion_fast-food.png" },
 ];
