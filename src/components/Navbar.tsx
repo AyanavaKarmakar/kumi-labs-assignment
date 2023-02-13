@@ -4,7 +4,7 @@ import { mortiseFont, mulishFont } from "../fonts";
 
 export const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between bg-white px-4 py-6 lg:bg-[#FFE475] lg:shadow-md">
+    <nav className="flex items-center justify-between bg-white px-4 pt-5 pb-6 lg:bg-[#FFE475] lg:shadow-md">
       <div
         className={clsx("text-3xl text-[#100E3A]", `${mortiseFont.className}`)}
       >
