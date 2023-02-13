@@ -5,11 +5,12 @@ import clsx from "clsx";
 
 export const TopBar = () => {
   return (
-    <div className={clsx(`${mulishFont.className}`, "text-lg")}>
+    <div className={clsx(`${mulishFont.className}`, "block text-lg lg:hidden")}>
       {CategoryList.map(({ id, name, icon }) => (
         <div
           key={id}
           className={clsx(
+            "flex flex-col items-center justify-center gap-x-3",
             "my-[10px] cursor-pointer py-[10px] px-3",
             `${
               name === "Bakery"
