@@ -65,18 +65,11 @@ export const ItemsList: TItemsList = [
     description: "18 oz",
   },
   {
-    id: 2,
+    id: 8,
     name: "Strawberries",
     icon: "/assets/product/strawberry.svg",
     cost: "0.69",
     description: "1 lb",
     discount: "0.69",
-  },
-  {
-    id: 3,
-    name: "Yogurt",
-    icon: "/assets/product/yogurt.svg",
-    cost: "0.69",
-    description: "1 lb",
   },
 ];

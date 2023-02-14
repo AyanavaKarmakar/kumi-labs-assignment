@@ -7,26 +7,25 @@ export const SideBar = () => {
     <aside
       className={clsx(
         `${mulishFont.className}`,
-        "ml-[20px] mt-[20px] w-64 bg-white text-lg font-bold"
+        "ml-[20px] mt-[20px] w-64 bg-white text-lg font-bold",
+        "fixed left-0 top-20"
       )}
     >
-      <div>
-        {CategoryList.map(({ id, name }) => (
-          <div
-            key={id}
-            className={clsx(
-              "my-[10px] cursor-pointer py-[10px] px-3",
-              `${
-                name === "Bakery"
-                  ? "rounded-xl bg-[#5DA9E9] text-white"
-                  : "bg-white text-[#737D94]"
-              }`
-            )}
-          >
-            {name}
-          </div>
-        ))}
-      </div>
+      {CategoryList.map(({ id, name }) => (
+        <div
+          key={id}
+          className={clsx(
+            "my-[10px] cursor-pointer py-[10px] px-3",
+            `${
+              name === "Bakery"
+                ? "rounded-xl bg-[#5DA9E9] text-white"
+                : "bg-white text-[#737D94]"
+            }`
+          )}
+        >
+          {name}
+        </div>
+      ))}
     </aside>
   );
 };

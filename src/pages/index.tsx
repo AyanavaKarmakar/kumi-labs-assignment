@@ -22,7 +22,9 @@ const Home: NextPage = () => {
 
         <div className="hidden flex-row gap-x-[50px] lg:flex">
           <SideBar />
-          <ItemListContainer />
+          <div className="ml-80">
+            <ItemListContainer />
+          </div>
         </div>
       </main>
     </>
