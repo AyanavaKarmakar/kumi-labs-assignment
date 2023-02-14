@@ -30,7 +30,7 @@ export const TopBar = () => {
             >
               <Image
                 src={firstWord === "Dairy" ? activeIcon : icon}
-                alt="category icon"
+                alt={name}
                 height={24}
                 width={24}
               />
