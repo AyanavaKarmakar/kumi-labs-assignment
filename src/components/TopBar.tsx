@@ -24,12 +24,13 @@ export const TopBar = () => {
           <div key={id} className="flex flex-col items-center">
             <div
               className={clsx(
-                "cursor-pointer rounded-md p-4 shadow-md",
+                "h-[48px] w-[48px] cursor-pointer rounded-md p-[12px] shadow-md",
                 firstWord === "Produce" ? "bg-[#5DA9E9]" : "bg-[#EDEDED]"
               )}
             >
-              <Image src={icon} width={20} height={50} alt="category icon" />
+              <Image src={icon} alt="category icon" height={24} width={24} />
             </div>
+
             <div
               className={clsx(
                 "mt-[5px] text-center text-[12px] font-bold",
