@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export const ItemListContainer = () => {
   return (
-    <div className="mt-[120px]">
+    <div className="mt-[175px]">
       {/* Category Title */}
       {CategoryList.map(({ id, name }) => (
-        <div key={id}>
-          <div className="mr-5 flex flex-row">
+        <div key={id} className="px-5 lg:px-0">
+          <div className="flex flex-row lg:mr-5">
             <h1
               className={clsx(
                 `${mortiseFont.className}`,

@@ -5,7 +5,7 @@ import { mulishFont } from "../fonts";
 
 export const Products = () => {
   return (
-    <div className="flex flex-row gap-x-2">
+    <div className="flex flex-row gap-x-2 overflow-y-clip overflow-x-scroll">
       {ItemsList.map(({ id, name, icon, description, cost, discount }) => (
         <div key={id} className="relative h-[220px] w-[140px] py-5">
           <Image src={icon} alt={name} height={100} width={100} />
