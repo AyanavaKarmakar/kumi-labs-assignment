@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>E-Commerce App</title>
         <meta name="description" content="E-Commerce App SPA" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/favicon.ico" />
       </Head>
 
       <main>

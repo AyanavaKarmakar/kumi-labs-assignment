@@ -7,11 +7,15 @@ const CategoryListValidator = z.array(
 export type TCategoryList = z.infer<typeof CategoryListValidator>;
 
 export const CategoryList: TCategoryList = [
-  { id: 1, name: "Produce", icon: "/fa-solid_carrot.png" },
-  { id: 2, name: "Prepared foods", icon: "/mdi_chocolate.png" },
-  { id: 3, name: "Canned foods & Soups", icon: "/game-icons_canned-fish.png" },
-  { id: 4, name: "Bakery", icon: "/material-symbols_cake-rounded.png" },
-  { id: 5, name: "Dairy & Eggs", icon: "/jam_eggs-f.png" },
-  { id: 6, name: "Frozen", icon: "/ion_fast-food.png" },
-  { id: 7, name: "Meat & Seafood", icon: "/ion_fast-food.png" },
+  { id: 1, name: "Produce", icon: "/assets/fa-solid_carrot.png" },
+  { id: 2, name: "Prepared foods", icon: "/assets/mdi_chocolate.png" },
+  {
+    id: 3,
+    name: "Canned foods & Soups",
+    icon: "/assets/game-icons_canned-fish.png",
+  },
+  { id: 4, name: "Bakery", icon: "/assets/material-symbols_cake-rounded.png" },
+  { id: 5, name: "Dairy & Eggs", icon: "/assets/jam_eggs-f.png" },
+  { id: 6, name: "Frozen", icon: "/assets/ion_fast-food.png" },
+  { id: 7, name: "Meat & Seafood", icon: "/assets/ion_fast-food.png" },
 ];
