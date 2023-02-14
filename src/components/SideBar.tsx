@@ -7,7 +7,7 @@ export const SideBar = () => {
     <aside
       className={clsx(
         `${mulishFont.className}`,
-        "ml-[20px] mt-[20px] hidden w-64 bg-white text-lg font-bold lg:block"
+        "ml-[20px] mt-[20px] w-64 bg-white text-lg font-bold"
       )}
     >
       <div>

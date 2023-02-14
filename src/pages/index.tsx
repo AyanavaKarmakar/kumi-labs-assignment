@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { Navbar, SideBar, TopBar } from "../components";
+import { ItemListContainer, Navbar, SideBar, TopBar } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -14,8 +14,16 @@ const Home: NextPage = () => {
       <main>
         <Navbar />
 
-        <TopBar />
-        <SideBar />
+        <div className="flex flex-col gap-y-3 lg:hidden">
+          <TopBar />
+          <hr />
+          <ItemListContainer />
+        </div>
+
+        <div className="hidden flex-row gap-x-[50px] lg:flex">
+          <SideBar />
+          <ItemListContainer />
+        </div>
       </main>
     </>
   );
