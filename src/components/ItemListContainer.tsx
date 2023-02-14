@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const ItemListContainer = () => {
   return (
-    <div className="mt-[175px]">
+    <div className="mt-[165px] lg:mt-[120px]">
       {/* Category Title */}
       {CategoryList.map(({ id, name }) => (
         <div key={id} className="px-5 lg:px-0">

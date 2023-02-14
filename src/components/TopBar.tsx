@@ -7,7 +7,7 @@ export const TopBar = () => {
   return (
     <div
       className={clsx(
-        "fixed z-10 mt-[85px] mb-4 flex w-full flex-row items-center space-x-[15px] overflow-hidden overflow-x-auto bg-white",
+        "fixed z-10 mt-[85px] flex w-full flex-row items-center space-x-[15px] overflow-hidden overflow-x-auto bg-white pb-3",
         `${mulishFont.className}`
       )}
     >
@@ -51,6 +51,7 @@ export const TopBar = () => {
           );
         })}
       </div>
+      <hr />
     </div>
   );
 };
