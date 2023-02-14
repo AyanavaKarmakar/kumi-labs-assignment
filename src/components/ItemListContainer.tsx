@@ -9,8 +9,8 @@ export const ItemListContainer = () => {
     <div className="mt-[120px]">
       {/* Category Title */}
       {CategoryList.map(({ id, name }) => (
-        <>
-          <div key={id} className="mr-5 flex flex-row">
+        <div key={id}>
+          <div className="mr-5 flex flex-row">
             <h1
               className={clsx(
                 `${mortiseFont.className}`,
@@ -30,7 +30,7 @@ export const ItemListContainer = () => {
           </div>
           <Products />
           <hr className="py-5" />
-        </>
+        </div>
       ))}
     </div>
   );
