@@ -21,6 +21,7 @@ export const ItemListContainer = () => {
             </h1>
 
             <Image
+              priority={true}
               className="block pt-[2px] lg:hidden"
               src="/assets/entypo_chevron-small-right.svg"
               alt={"right arrow"}
@@ -29,6 +30,7 @@ export const ItemListContainer = () => {
             />
 
             <Image
+              priority={true}
               className="hidden pt-[4px] lg:block"
               src="/assets/entypo_chevron-small-right.svg"
               alt={"right arrow"}

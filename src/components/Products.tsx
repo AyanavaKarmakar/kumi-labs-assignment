@@ -13,6 +13,7 @@ export const Products = () => {
         >
           {/* For large screens */}
           <Image
+            priority={true}
             className="hidden lg:block"
             src={icon}
             alt={name}
@@ -21,6 +22,7 @@ export const Products = () => {
           />
           <span className="absolute bottom-[110px] right-[40px]">
             <Image
+              priority={true}
               className="hidden cursor-pointer lg:block"
               src="/assets/product/add-item.svg"
               alt="add or remove item"
@@ -31,6 +33,7 @@ export const Products = () => {
 
           {/* For small/medium screens */}
           <Image
+            priority={true}
             className="block lg:hidden"
             src={icon}
             alt={name}
@@ -39,6 +42,7 @@ export const Products = () => {
           />
           <span className="absolute bottom-[120px] right-[15px]">
             <Image
+              priority={true}
               className="block cursor-pointer lg:hidden"
               src="/assets/product/add-item.svg"
               alt="add or remove item"
