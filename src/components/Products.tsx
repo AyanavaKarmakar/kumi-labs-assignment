@@ -6,8 +6,17 @@ export const Products = () => {
   return (
     <div className="flex flex-row">
       {ItemsList.map(({ id, name, icon, description, cost, discount }) => (
-        <div key={id} className="h-[220px] w-[140px] py-5">
+        <div key={id} className="relative h-[220px] w-[140px] py-5">
           <Image src={icon} alt={name} height={100} width={100} />
+          <span className="absolute bottom-[110px] right-[40px]">
+            <Image
+              className="cursor-pointer"
+              src="/assets/product/add-item.svg"
+              alt="add or remove item"
+              height={35}
+              width={35}
+            />
+          </span>
           <div className="pl-2 pt-1">
             <p>
               <span className={clsx(`${discount && "line-through"}`)}>
