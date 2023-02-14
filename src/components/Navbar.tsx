@@ -11,7 +11,7 @@ export const Navbar = () => {
         E-Commerce
       </div>
 
-      <div className="flex h-10 w-20 cursor-pointer flex-row items-center justify-center gap-x-[5px] rounded-3xl bg-white px-[20px] text-center shadow-md">
+      <div className="flex h-10 w-20 cursor-pointer flex-row items-center justify-center gap-x-[10px] rounded-3xl bg-white px-[20px] text-center shadow-md">
         <Image src="/assets/cart.png" alt="cart icon" height="10" width="20" />
         <span className={clsx(`${mulishFont.className}`, "text-lg text-black")}>
           3
