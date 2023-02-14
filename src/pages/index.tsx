@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col gap-y-3 lg:hidden">
           <TopBar />
           <hr />
-          <ItemListContainer />
+          {/* <ItemListContainer /> */}
         </div>
 
         <div className="hidden flex-row gap-x-[50px] lg:flex">
