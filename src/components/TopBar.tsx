@@ -11,7 +11,7 @@ export const TopBar = () => {
         `${mulishFont.className}`
       )}
     >
-      {CategoryList.map(({ id, name, icon }) => {
+      {CategoryList.map(({ id, name, icon, activeIcon }) => {
         /**
          * Split the name into words
          * and get the first word
@@ -25,18 +25,21 @@ export const TopBar = () => {
             <div
               className={clsx(
                 "h-[48px] w-[48px] cursor-pointer rounded-md p-[12px] shadow-md",
-                firstWord === "Produce" ? "bg-[#5DA9E9]" : "bg-[#EDEDED]"
+                firstWord === "Dairy" ? "bg-[#5DA9E9]" : "bg-[#EDEDED]"
               )}
             >
-              <Image src={icon} alt="category icon" height={24} width={24} />
+              <Image
+                src={firstWord === "Dairy" ? activeIcon : icon}
+                alt="category icon"
+                height={24}
+                width={24}
+              />
             </div>
 
             <div
               className={clsx(
                 "mt-[5px] text-center text-[12px] font-bold",
-                `${
-                  firstWord === "Produce" ? "text-[#5DA9E9]" : "text-[#B6BAC3]"
-                }`
+                `${firstWord === "Dairy" ? "text-[#5DA9E9]" : "text-[#B6BAC3]"}`
               )}
             >
               {firstWord}
