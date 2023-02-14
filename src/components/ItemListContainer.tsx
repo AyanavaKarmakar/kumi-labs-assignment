@@ -1,7 +1,21 @@
+import { mortiseFont } from "../fonts";
+import { CategoryList } from "../utils/CategoryList";
+import clsx from "clsx";
+
 export const ItemListContainer = () => {
   return (
     <div>
-      <h1>Item List Container</h1>
+      {CategoryList.map(({ id, name }) => (
+        <h1
+          key={id}
+          className={clsx(
+            `${mortiseFont.className}`,
+            "text-3xl font-[700px] text-[#100E3A]"
+          )}
+        >
+          {name}
+        </h1>
+      ))}
     </div>
   );
 };
