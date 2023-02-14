@@ -7,21 +7,50 @@ export const Products = () => {
   return (
     <div className="flex flex-row gap-x-2 overflow-x-auto">
       {ItemsList.map(({ id, name, icon, description, cost, discount }) => (
-        <div key={id} className="relative h-[220px] w-[140px] py-5">
-          <Image src={icon} alt={name} height={100} width={100} />
+        <div
+          key={id}
+          className="relative h-[200px] w-[120px] py-5 px-3 lg:h-[220px] lg:w-[140px] lg:px-0"
+        >
+          {/* For large screens */}
+          <Image
+            className="hidden lg:block"
+            src={icon}
+            alt={name}
+            height={100}
+            width={100}
+          />
           <span className="absolute bottom-[110px] right-[40px]">
             <Image
-              className="cursor-pointer"
+              className="hidden cursor-pointer lg:block"
               src="/assets/product/add-item.svg"
               alt="add or remove item"
               height={35}
               width={35}
             />
           </span>
-          <div className="space-y-1 pl-2 pt-2">
+
+          {/* For small/medium screens */}
+          <Image
+            className="block lg:hidden"
+            src={icon}
+            alt={name}
+            height={75}
+            width={75}
+          />
+          <span className="absolute bottom-[120px] right-[15px]">
+            <Image
+              className="block cursor-pointer lg:hidden"
+              src="/assets/product/add-item.svg"
+              alt="add or remove item"
+              height={25}
+              width={25}
+            />
+          </span>
+
+          <div className="space-y-0 pl-2 pt-2 lg:space-y-1">
             <p
               className={
-                (clsx("text-[20px] font-[700] text-[#100E3A]"),
+                (clsx("text-[16px] font-[700] text-[#100E3A] lg:text-[20px]"),
                 `${mulishFont.className}`)
               }
             >
@@ -29,15 +58,15 @@ export const Products = () => {
                 className={clsx(
                   `${
                     discount
-                      ? "text-[20px] font-[700] text-[#737D94] line-through"
-                      : "text-[20px] font-[700] text-[#100E3A]"
+                      ? "text-[16px] font-[700] text-[#737D94] line-through lg:text-[20px]"
+                      : "text-[16px] font-[700] text-[#100E3A] lg:text-[20px]"
                   }`
                 )}
               >
                 ${cost}
               </span>
               {discount && (
-                <span className="text-[20px] font-[700] text-[#100E3A]">
+                <span className="text-[16px] font-[700] text-[#100E3A] lg:text-[20px]">
                   {`  $${discount}`}
                 </span>
               )}
@@ -45,7 +74,7 @@ export const Products = () => {
             <h2
               className={clsx(
                 `${mulishFont.className}`,
-                "text-[16px] font-[600] text-[#100E3A]"
+                "text-[14px] font-[600] text-[#100E3A] lg:text-[16px]"
               )}
             >
               {name}
@@ -53,7 +82,7 @@ export const Products = () => {
             <p
               className={clsx(
                 `${mulishFont.className}`,
-                "text-[16px] font-[700] text-[#B6BAC3]"
+                "text-[12px] font-[700] text-[#B6BAC3] lg:text-[16px]"
               )}
             >
               {description}
