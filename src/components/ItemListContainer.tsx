@@ -14,14 +14,22 @@ export const ItemListContainer = () => {
             <h1
               className={clsx(
                 `${mortiseFont.className}`,
-                "text-3xl font-[700px] text-[#100E3A]"
+                "text-[16px] font-bold text-[#100E3A] lg:text-3xl lg:font-[700px]"
               )}
             >
               {name}
             </h1>
 
             <Image
-              className="pt-[4px]"
+              className="block pt-[2px] lg:hidden"
+              src="/assets/entypo_chevron-small-right.svg"
+              alt={"right arrow"}
+              width={24}
+              height={24}
+            />
+
+            <Image
+              className="hidden pt-[4px] lg:block"
               src="/assets/entypo_chevron-small-right.svg"
               alt={"right arrow"}
               width={36}
