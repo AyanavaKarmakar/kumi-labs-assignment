@@ -1,4 +1,4 @@
-import { mortiseFont } from "../fonts";
+import { mortiseFont, mulishFont } from "../fonts";
 import { CategoryList } from "../utils/CategoryList";
 import { Products } from "./Products";
 import clsx from "clsx";
@@ -14,7 +14,7 @@ export const ItemListContainer = () => {
             <h1
               className={clsx(
                 `${mortiseFont.className}`,
-                "text-[16px] font-bold text-[#100E3A] lg:text-3xl lg:font-[700px]"
+                "ml-3 text-[16px] font-bold text-[#100E3A] lg:text-3xl lg:font-[700px]"
               )}
             >
               {name}
@@ -35,6 +35,15 @@ export const ItemListContainer = () => {
               width={36}
               height={36}
             />
+
+            <div
+              className={clsx(
+                `${mulishFont.className}`,
+                "ml-auto mr-1 block pt-[6px] text-[12px] font-[700] text-[#5DA9E9] lg:hidden"
+              )}
+            >
+              View All
+            </div>
           </div>
           <Products />
           <hr className="py-5" />
