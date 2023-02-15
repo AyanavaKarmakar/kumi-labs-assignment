@@ -3,16 +3,27 @@ import { mulishFont } from "../fonts";
 import { useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { useDispatch } from "react-redux";
+import { addItem, removeItem } from "../redux/CartCounterSlice";
 
 export const Products = () => {
   const [addedItems, setAddedItems] = useState<{ [key: number]: boolean }>({});
+  const dispatch = useDispatch();
 
   /**
-   * Toggle add / remove item icon
+   * Toggles the item in the cart and
+   * updates the cart item counter
    *
-   * @param itemId
+   * @param itemId - id of the item
+   * @param isAdded - true if item is added to cart, false otherwise
    */
-  const toggleItem = (itemId: number) => {
+  const toggleItem = (itemId: number, isAdded: boolean | undefined) => {
+    if (isAdded) {
+      dispatch(removeItem());
+    } else {
+      dispatch(addItem());
+    }
+
     setAddedItems({
       ...addedItems,
       [itemId]: !addedItems[itemId],
@@ -41,7 +52,7 @@ export const Products = () => {
             <span className="absolute bottom-[110px] right-[40px]">
               <Image
                 priority={true}
-                onClick={() => toggleItem(id)}
+                onClick={() => toggleItem(id, isAdded)}
                 className="hidden cursor-pointer lg:block"
                 src={
                   isAdded
@@ -66,7 +77,7 @@ export const Products = () => {
             <span className="absolute bottom-[120px] right-[15px]">
               <Image
                 priority={true}
-                onClick={() => toggleItem(id)}
+                onClick={() => toggleItem(id, isAdded)}
                 className="block cursor-pointer lg:hidden"
                 src={
                   isAdded
