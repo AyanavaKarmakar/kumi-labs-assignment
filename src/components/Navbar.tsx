@@ -1,8 +1,14 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { mortiseFont, mulishFont } from "../fonts";
+import { useSelector } from "react-redux";
+import { type RootState } from "../redux/store";
 
 export const Navbar = () => {
+  const cartItemCounter = useSelector(
+    (state: RootState) => state.cartCounter.value
+  );
+
   return (
     <nav className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-[20px] pt-5 pb-6 lg:bg-[#FFE475] lg:shadow-md">
       <div
@@ -25,7 +31,7 @@ export const Navbar = () => {
             "pb-[2px] text-lg text-black"
           )}
         >
-          3
+          {cartItemCounter}
         </span>
       </div>
     </nav>
