@@ -32,14 +32,12 @@ export const TopBar = () => {
               <div
                 className={clsx(
                   "h-[48px] w-[48px] cursor-pointer rounded-md p-[12px] shadow-md",
-                  firstWord === selectedCategory
-                    ? "bg-[#5DA9E9]"
-                    : "bg-[#EDEDED]"
+                  name === selectedCategory ? "bg-[#5DA9E9]" : "bg-[#EDEDED]"
                 )}
               >
                 <Image
                   priority={true}
-                  src={firstWord === selectedCategory ? activeIcon : icon}
+                  src={name === selectedCategory ? activeIcon : icon}
                   alt={name}
                   height={24}
                   width={24}
@@ -50,7 +48,7 @@ export const TopBar = () => {
                 className={clsx(
                   "mt-[5px] text-center text-[12px] font-bold",
                   `${
-                    firstWord === selectedCategory
+                    name === selectedCategory
                       ? "text-[#5DA9E9]"
                       : "text-[#B6BAC3]"
                   }`
