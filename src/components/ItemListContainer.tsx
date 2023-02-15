@@ -7,6 +7,9 @@ import { useRef } from "react";
 import { Scrollspy } from "@makotot/ghostui";
 
 export const ItemListContainer = () => {
+  /**
+   * Create a ref for each category
+   */
   const sectionRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
