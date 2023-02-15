@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@makotot/ghostui": "^2.0.0",
     "@next/font": "^13.1.6",
     "@reduxjs/toolkit": "^1.9.2",
     "clsx": "^1.2.1",
